@@ -2,29 +2,69 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Amazeriffic</title>	
+	<title>Amazeriffic</title>
+	<link rel="stylesheet" href="style.css">	
 </head>
 <body>
-	<header>
-		<h1>Amazeriffic</h1>
-		<nav>
-			<a href="#">Регистрация</a> | 
-			<a href="#">ВиО</a> | 
-			<a href="#">Техподдержка</a>
-		</nav>
-	</header>		
+	
+	<div class="container">
+		<header class="header">
+			<h1 class="logo">Amazeriffic!</h1>
+			<nav class="header-nav">
+				<a class="header-nav__link" href="#">Войти</a> | 
+				<a class="header-nav__link"  href="#">ВиО</a> | 
+				<a class="header-nav__link"  href="#">Техподдержка</a>
+			</nav>
+		</header>
+	</div>	
+	
+<div class="line"></div>
 
-	<main>
-		<h2>Amazeriffic изменит вашу жизнь!</h2>
-		<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque expedita, tempora esse minima soluta laboriosam unde! Tempora sed sequi vel minima, ratione dolorem soluta, amet eveniet mollitia, culpa dolor maiores!</p>
-		<h3>Почему вам нужен Amazeriffic?</h3>
-		<ul>
-			<li>Он легко впишется в вашу жизнь</li>
-			<li>Он классный</li>
-			<li>Он перевернет ваш мир</li>
-		</ul>
-		<img src="http://learningwebappdev.com/lightbulb.png" alt="Изображение лампочки">
-	</main>	
+	<div class="container">
+		<main class="main">
+			<h2>Amazeriffic изменит вашу жизнь!</h2>
+			<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque expedita, tempora esse minima soluta laboriosam unde! Tempora sed sequi vel minima, ratione dolorem soluta, amet eveniet</p>
+			<h3>Почему вам нужен Amazeriffic?</h3>
+			<ul class="main__ul">
+				<li>Он легко впишется в вашу жизнь</li>
+				<li>Он классный</li>
+				<li>Он перевернет ваш мир</li>
+			</ul>
+			<div class="main-img">
+				<img src="http://learningwebappdev.com/lightbulb.png" alt="Изображение лампочки">
+			</div>			
+		</main>
+	</div>
+		
+<footer class="footer">
+	<div class="container">
+		<div class="footer-content">
+			<div class="footer-contacts">				
+				<h3 class="footer-contacts__title">Свяжитесь с нами</h3>				
+				<div class="footer-contacts__address">
+					<p class="footer-contacts__address--name">Amazeriffic!</p>
+					<p>555 50-я улица</p>
+					<p>Эшоилл, Северная Каролина 28801</p>
+				</div>
+				</div>
+			<div class="footer-map">				
+				<h3 class="footer-map__title">Карта сайта</h3>				
+				<div class="footer-map__list">
+					<div class="footer-map__list-links" >
+						<p>Домой</p>
+						<p>О нас</p>
+						<p>Право</p>
+					</div>
+					<div class="footer-map__list-right">
+					<p>Техподдержка</p>
+						<p>ВиО</p>
+						<p>Вакансии</p>
+					</div>					 				 
+				</div>
+			</div>
+		</div>		
+	</div>	
+</footer>
 	
 </body>
 </html>

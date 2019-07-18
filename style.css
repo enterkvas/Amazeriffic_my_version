@@ -1,0 +1,106 @@
+body {
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;    
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+}
+p {
+    margin: 0;
+}
+    .container {
+        width: 1140px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+        .header {
+            padding-bottom: 18px;
+
+            display: flex;
+            justify-content: space-between;             
+        }
+            .logo {
+                font-weight: 400;
+                font-style: oblique;
+                font-size: 60px;
+                margin: 0;
+                margin-top: 10px;
+            }
+            .header-nav {
+                margin-top: 15px;
+                padding-right: 100px;
+            }
+                .header-nav__link {
+                    text-decoration: none;
+                    color: #000;
+                    font-weight: 900;
+                }
+
+.line {
+    border-bottom: 2px solid #ccc;    
+}
+    .container {        
+    }
+        .main {
+            padding-top: 18px;
+            padding-bottom: 260px;
+            position: relative;
+        }
+            .main h2 {
+                font-weight: 700;
+                font-size: 30px;
+                margin-bottom: 0;
+                margin-bottom: 10px;
+            }
+            .main p {
+                width: 600px;
+            }
+            .main h3 {
+                font-size: 20px;
+                margin-bottom: 0;
+                margin-bottom: px;
+            }
+            .main__ul {
+                margin-top: 0;
+                margin-top: 5px;
+                padding-left: 0;
+                padding-left: 17px;
+            }
+            .main-img {
+                position: absolute;
+                content:"";
+                right: 180px;
+                top: 30px;
+            }
+
+footer {
+    background-color: #ccc;    
+}
+    .footer-content {
+        padding-top: 40px;
+        line-height: 1;
+
+        display: flex;
+        justify-content: space-between;
+    }
+        .footer-contacts {           
+        }
+            .footer-contacts__title {
+                font-weight: 400;
+            }
+                .footer-contacts__address--name {
+                    font-style: oblique;
+                }
+        .footer-map {
+            width: 25%;
+        }
+            .footer-map__title {
+                font-weight: 400;
+            }
+            .footer-map__list {
+                height: 60px;                
+                font-weight: 700;
+
+                display: flex;
+                justify-content: space-between;
+            }
