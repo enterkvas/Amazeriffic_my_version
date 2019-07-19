@@ -66,8 +66,7 @@ p {
                 padding-left: 17px;
             }
             .main-img {
-                position: absolute;
-                content:"";
+                position: absolute;                
                 right: 180px;
                 top: 30px;
             }
