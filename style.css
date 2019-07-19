@@ -102,3 +102,9 @@ footer {
                 display: flex;
                 justify-content: space-between;
             }
+.label {
+    display: inline-block;
+    position: absolute;
+    bottom: 11%;
+    right: 50%;
+}
