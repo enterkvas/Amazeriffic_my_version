@@ -43,7 +43,8 @@ p {
     }
         .main {
             padding-top: 18px;
-            padding-bottom: 260px;            
+            padding-bottom: 260px;
+            position: relative;            
         }
             .main h2 {
                 font-weight: 700;
