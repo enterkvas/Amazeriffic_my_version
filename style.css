@@ -3,7 +3,7 @@ body {
     margin-right: auto;
     margin-left: auto;    
     border: 2px solid #ccc;
-    box-sizing: border-box;
+    box-sizing: border-box;   
 }
 p {
     margin: 0;
@@ -43,8 +43,7 @@ p {
     }
         .main {
             padding-top: 18px;
-            padding-bottom: 260px;
-            position: relative;
+            padding-bottom: 260px;            
         }
             .main h2 {
                 font-weight: 700;
@@ -71,12 +70,11 @@ p {
                 top: 30px;
             }
 
-footer {
-    background-color: #ccc;    
+.footer {
+    background-color: #ccc;       
 }
-    .footer-content {
-        padding-top: 40px;
-        line-height: 1;
+    .footer-content {       
+        line-height: 1;          
 
         display: flex;
         justify-content: space-between;
@@ -102,9 +100,8 @@ footer {
                 display: flex;
                 justify-content: space-between;
             }
-.label {
-    display: inline-block;
+.label {   
     position: absolute;
-    bottom: 11%;
-    right: 50%;
+    bottom: 0;
+    left: 0;
 }
