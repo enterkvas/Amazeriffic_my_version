@@ -13,27 +13,31 @@ p {
 .container {
     width: 915px;
     margin-left: auto;
-    margin-right: auto;
-
-    display: flex;
-    justify-content: space-between;
+    margin-right: auto;    
 }
-
+.line {
+    border-bottom: 2px solid #ccc;    
+}
     .header {
-        /* padding-bottom: 18px;                      */
+        padding-top: 20px;
+
+        display: flex;
+        justify-content: space-between;                   
     }
             
         .logo {
-            font-weight: 400;            
-            font-size: 60px;
+            margin: 0;            
+            font-weight: 700;            
+            font-size: 48px;
             font-style: italic;
-            margin: 0;
-            margin-top: 10px;
-            margin-bottom: 18px;
+            line-height: 1;
+            margin: 0;           
+            margin-bottom: 30px;
         }
         .header-nav {
-            margin-top: 25px;
-            /* padding-right: 100px; */
+            margin: 0;
+            line-height: 1;            
+            font-size: 14px;
         }
             .header-nav__link {
                 text-decoration: none;
@@ -41,24 +45,29 @@ p {
                 font-weight: 900;
             }
 
-.line {
-    border-bottom: 2px solid #ccc;    
-}    
-    .main {
-        padding-top: 18px;
-        padding-bottom: 260px;
-        position: relative;            
+    
+    .main {                
+        padding-top: 30px;
+        padding-bottom: 80px;
+        position: relative;
+        
+        display: flex;
+        flex-direction: column;
     }
         .main h2 {
             font-weight: 700;
             font-size: 30px;
-            margin-bottom: 0;
+            line-height: 1;
+            margin: 0;           
             margin-bottom: 10px;
         }
         .main p {
-            width: 600px;
+            width: 60%;
+            margin-bottom: 35px;
+            line-height: 1
         }
         .main h3 {
+            margin: 0;
             font-size: 20px;
             margin-bottom: 0;               
         }
@@ -67,11 +76,15 @@ p {
             margin-top: 5px;
             padding-left: 0;
             padding-left: 17px;
-        }
+            list-style-type: circle;
+        }        
         .main-img {
-            position: absolute;                
-            right: 180px;
-            top: 30px;
+            position: absolute; 
+            content: '';
+            width: 185px;
+            height: 310px;               
+            right: 40px;
+            top: 5px;
         }
 
 .footer {
