@@ -74,10 +74,19 @@ p {
         .main__ul {
             margin: 0;            
             margin-top: 5px;
-            margin-bottom: 100px;            
+            margin-bottom: 35px;            
             padding-left: 20px;
             list-style-type: circle;
-        }        
+        }         
+         .main a.list {            
+             display: inline-block;
+             margin-bottom: 25px;             
+             color: blue;
+             font-size: 14px;
+             font-weight: bold;                          
+             text-decoration: none;             
+             cursor: pointer;
+         }      
         .main-img {
             position: absolute; 
             content: '';
@@ -85,6 +94,17 @@ p {
             height: 310px;               
             right: 40px;
             top: 30px;
+        }
+
+        .to_main {
+            display: block;
+            margin-top: 20px;
+             margin-bottom: 25px;             
+             color: blue;
+             font-size: 14px;
+             font-weight: bold;                          
+             text-decoration: none;             
+             cursor: pointer;
         }
 
 .footer {
@@ -116,6 +136,7 @@ p {
                 height: 60px;                
                 font-weight: 700;
                 color: #FF0000;
+                cursor: pointer;
 
                 display: flex;
                 justify-content: space-between;

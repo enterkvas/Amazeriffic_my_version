@@ -1,0 +1,64 @@
+.tabs a span {
+    display: inline-block;
+    border-radius: 5px 5px 0 0;
+    font-size: 90%;
+    font-weight: bold;
+    letter-spacing: 0.5px;            
+    background: #ddd;
+    padding: 3px;
+    margin-right: 5px;  
+    text-align: center;
+    width: 100px;
+    
+}
+.tabs a span.active {
+    background: #eee;
+}
+.content {
+    background-color: #eee;
+    /* display: none; */
+}
+    .content ul {
+        margin: 0;
+        padding: 5px;
+    }
+        .content li {
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            list-style-type: none;
+            font-size: 14px;
+            margin: 10px 0;
+            line-height: 1;
+            padding-left: 5px;
+        }        
+            main a.to_main {
+                text-decoration: none;
+                display: block;
+                margin-top: 10px;
+                font-weight: bold;
+                color: blue;
+                font-size: 90%;
+            }
+.form__list {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+}
+    .form__list input {
+        width: 260px;
+        height: 25px;
+        margin-right: 5px;
+    }  
+    .form__list button {
+        position: absolute;            
+        padding: 0;
+        background: #ccc;
+        width: 18px;
+        height: 27px;
+        border-radius: 5px;
+        font-size: 20px;
+        bottom: 2px;
+        font-weight: bold;
+    }           
