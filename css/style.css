@@ -78,9 +78,9 @@ p {
             padding-left: 20px;
             list-style-type: circle;
         }         
-         .main a.list {            
-             display: inline-block;
-             margin-bottom: 25px;             
+         .main a.main_a {            
+             display: block;
+             margin-bottom: 10px;             
              color: blue;
              font-size: 14px;
              font-weight: bold;                          
