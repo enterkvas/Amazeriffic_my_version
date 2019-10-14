@@ -80,6 +80,7 @@ p {
         }         
          .main a.main_a {            
              display: block;
+             width: 200px;
              margin-bottom: 10px;             
              color: blue;
              font-size: 14px;
@@ -88,8 +89,7 @@ p {
              cursor: pointer;
          }      
         .main-img {
-            position: absolute; 
-            content: '';
+            position: absolute;          
             width: 185px;
             height: 310px;               
             right: 40px;

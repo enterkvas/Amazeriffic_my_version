@@ -8,15 +8,10 @@
     padding: 3px;
     margin-right: 5px;  
     text-align: center;
-    width: 100px;
-    
+    width: 100px;    
 }
 .tabs a span.active {
     background: #eee;
-}
-.content {
-    background-color: #eee;
-    /* display: none; */
 }
     .content ul {
         margin: 0;
