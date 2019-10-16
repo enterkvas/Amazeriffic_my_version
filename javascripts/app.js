@@ -245,30 +245,7 @@
     // Мы можем использовать этот паттерн и селектор :nth-child, чтобы определить 
 // необходимые действия для примера с вкладками:
 
-
-                            
-    var main = function() {
-        "use strict";
-        $(".tabs a span").toArray().forEach(function (element) {
-            $(element).on("click", function() {
-                var $element = $(element);
-                $(".tabs span").removeClass('active');
-                $(element).addClass('active');
-                $("main .content").empty();
-                if($element.parent().is(":nth-child(1)")) {
-                    console.log("Щелчок по 1-й вкладке");
-                } else if ($element.parent().is(":nth-child(2)")) {
-                    console.log("Щелчок по 2-й вкладке");
-                } else if ($element.parent().is(":nth-child(3)")) {
-                    console.log("Щелчок по 3-й вкладке");
-                }
-                return false;
-            });
-        });
-    }
-    $(document).ready(main);
-
-
+// НЕРАБОЧИЙ КОД(оставил для примера):
 
     // var main = function() {
     //     "use strict";
@@ -276,77 +253,50 @@
     //         $(element).on("click", function() {
     //             var $element = $(element);
     //             $(".tabs span").removeClass('active');
-    //             $(element).addClacc('active');
+    //             $element.addClacc('active');
     //             $("main .content").empty();                
-    //             if($element.parent().is(":nth-child(1)")) {
-    //                 console.log("Щелч 1");
+    //             if ($element.parent().is(":nth-child(1)")) {
+    //                 console.log("Щелчок по 1-й вкладке");
     //             } else if ($element.parent().is(":nth-child(2)")) {
-    //                 console.log("Щелч 2");
+    //                 console.log("Щелчок по 2-й вкладке");
     //             } else if ($element.parent().is(":nth-child(3)")) {
-    //                 console.log("Щелч 3");
+    //                 console.log("Щелчок по 3-й вкладке");
     //             } 
     //             return false;
     //         });
     //     });
-    // }
+    // };
     // $(document).ready(main);
 
-    
-            
+// РАБОЧИЙ КОД:
 
-
-
-
-        // var main = function() {
-        //     "use strict";
-        //     $('.tabs a span').toArray().forEach(function(element) {
-        //         // создаем обработчик щелчков для этого элемента:
-        //         $(element).on("click", function() {
-        //             // поскольку мы используем версию элемента jQuery,
-        //             // нужно создать временную переменную,
-        //             // чтобы избежать постоянного обновления:
-        //             var $element = $(element);
-        //             $('tabs a span').removeClass('active');
-        //             $element.addClass('active');
-        //             $('main .content').empty();
-        //             if ($element.parent().is(":nth-child(1)")) {
-        //                 console.log("Щелчок на первой вкладке!");
-        //             } else if ($element.parent().is(":nth-child(2)")) {
-        //                 console.log("Щелчок на второй вкладке!");
-        //             } else if ($element.parent().is(":nth-child(3)")) {
-        //                 console.log("Щелчок на третьей вкладке!");
-        //             }
-        //             return false;
-        //         });
-        //     });
-        // }
-        // $(document).ready(main);
+        var main = function() {
+            "use strict";
+            $('.tabs a span').toArray().forEach(function(element) {
+                // создаем обработчик щелчков для этого элемента:
+                $(element).on("click", function() {
+                    // поскольку мы используем версию элемента jQuery,
+                    // нужно создать временную переменную,
+                    // чтобы избежать постоянного обновления:
+                    var $element = $(element);
+                    $('tabs a span').removeClass('active');
+                    $element.addClass('active');
+                    $('main .content').empty();
+                    if ($element.parent().is(":nth-child(1)")) {
+                        console.log("Щелчок на первой вкладке!");
+                    } else if ($element.parent().is(":nth-child(2)")) {
+                        console.log("Щелчок на второй вкладке!");
+                    } else if ($element.parent().is(":nth-child(3)")) {
+                        console.log("Щелчок на третьей вкладке!");
+                    }
+                    return false;
+                });
+            });
+        }
+        $(document).ready(main);
 
                             // Настройка содержимого вкладки
 
-            // var main = function() {
-            //     "use strict";
-            //     $('.tabs a span').toArray().forEach(function(element) {
-            //         // создаем обработчик щелчков для этого элемента:
-            //         $(element).on("click", function() {
-            //             // поскольку мы используем версию элемента jQuery,
-            //             // нужно создать временную переменную,
-            //             // чтобы избежать постоянного обновления:
-            //             var $element = $(element);
-            //             $('tabs a span').removeClass('active');
-            //             $element.addClass('active');
-            //             $('main .content').empty();
-            //             if ($element.parent().is(":nth-child(1)")) {
-            //                 $();
-            //             } else if ($element.parent().is(":nth-child(2)")) {
-            //                 console.log("Щелчок на второй вкладке!");
-            //             } else if ($element.parent().is(":nth-child(3)")) {
-            //                 console.log("Щелчок на третьей вкладке!");
-            //             }
-            //             return false;
-            //         });
-            //     });
-            // }
-            // $(document).ready(main);
+            
 
             
