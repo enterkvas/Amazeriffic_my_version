@@ -213,7 +213,7 @@
 
         // var main = function() {
         //     "use strict";
-        //     $('.tabs a span').toArray().forEach(function (element) {
+        // $('.tabs a span').toArray().forEach(function (element) {
         //         $(element).on("click", function() {
         //             $('.tabs a span').removeClass('active');
         //             $(element).addClass('active');
@@ -249,7 +249,7 @@
 
     // var main = function() {
     //     "use strict";
-    //     $(".tabs a span").toArray().forEach(function (element) {            
+    // $(".tabs a span").toArray().forEach(function (element) {            
     //         $(element).on("click", function() {
     //             var $element = $(element);
     //             $(".tabs span").removeClass('active');
@@ -270,33 +270,87 @@
 
 // РАБОЧИЙ КОД:
 
-        var main = function() {
-            "use strict";
-            $('.tabs a span').toArray().forEach(function(element) {
-                // создаем обработчик щелчков для этого элемента:
-                $(element).on("click", function() {
-                    // поскольку мы используем версию элемента jQuery,
-                    // нужно создать временную переменную,
-                    // чтобы избежать постоянного обновления:
-                    var $element = $(element);
-                    $('tabs a span').removeClass('active');
-                    $element.addClass('active');
-                    $('main .content').empty();
-                    if ($element.parent().is(":nth-child(1)")) {
-                        console.log("Щелчок на первой вкладке!");
-                    } else if ($element.parent().is(":nth-child(2)")) {
-                        console.log("Щелчок на второй вкладке!");
-                    } else if ($element.parent().is(":nth-child(3)")) {
-                        console.log("Щелчок на третьей вкладке!");
-                    }
-                    return false;
-                });
-            });
-        }
-        $(document).ready(main);
+        // var main = function() {
+        //     "use strict";
+        //      $('.tabs a span').toArray().forEach(function(element) {
+        //         // создаем обработчик щелчков для этого элемента:
+        //         $(element).on("click", function() {
+        //             // поскольку мы используем версию элемента jQuery,
+        //             // нужно создать временную переменную,
+        //             // чтобы избежать постоянного обновления:
+        //             var $element = $(element);
+        //             $('tabs a span').removeClass('active');
+        //             $element.addClass('active');
+        //             $('main .content').empty();
+        //             if ($element.parent().is(":nth-child(1)")) {
+        //                 console.log("Щелчок на первой вкладке!");
+        //             } else if ($element.parent().is(":nth-child(2)")) {
+        //                 console.log("Щелчок на второй вкладке!");
+        //             } else if ($element.parent().is(":nth-child(3)")) {
+        //                 console.log("Щелчок на третьей вкладке!");
+        //             }
+        //             return false;
+        //         });
+        //     });
+        // }
+        // $(document).ready(main);
 
                             // Настройка содержимого вкладки
 
-            
+// Прежде всего нужно создать сами списки задач в виде массива строковых элементов. 
+//Для этого добавим переменную внутрь функции main, где будет храниться массив 
+//текстовых констант с задачами:
 
-            
+        // var main = function() {
+        //     "use strict";
+        //     var toDos = [
+        //         "Закончить писать эту книгу",
+        //         "Вывести Грейси на прогулку в парк",
+        //         "Ответить на электронные письма",
+        //         "Подготовиться к лекции в понедельник",
+        //         "Обновить несколько новых задач",
+        //         "Купить продукты"
+        //     ];
+        //     ... все остальное, относящееся к вкладкам
+        // }
+        // $(document).ready(main);
+
+// Теперь, когда появятся новые задачи, все, что необходимо сделать, — добавить их в конец массива.
+// Старые задачи стоят в массиве первыми, а новые — последними.
+// Вторая вкладка (Старые) будет перечислять задачи в том же порядке, что и в массиве, а первая вкладка (Новые) — в обратном.
+// Для начала: как будет перестраиваться контент в случае щелчка на второй вкладке:
+
+        var main = function () {
+            "use strict";
+            var toDos = [
+              "Закончить писать эту книгу",
+              "Вывести Грейси на прогулку в парк",
+              "Ответить на электронные письма",
+              "Подготовиться к лекции в понедельник",
+              "Обновить несколько новых задач",
+              "Купить продукты"
+            ];
+            $('.tabs a span').toArray().forEach(function(element) {
+                $(element).on("click", function () {
+                    var $element = $(element),
+                    $content;
+                    $(".tabs a span").removeClass("active");
+                    $element.addClass("active");
+                    $("main .content").empty();
+                    if ($element.parent().is(":nth-child(1)")) {
+                        console.log("Щелчок на первой вкладке!");
+                    }   else if ($element.parent().is(":nth-child(2)")) {
+                        $content = $("<ul>");
+                        toDos.forEach(function (todo) {
+                            $content.append($("<li>").text(todo));
+                        });
+                            $("main .content").append($content);
+                    }   else if ($element.parent().is(":nth-child(3)")) {
+                        console.log("Щелчок на третьей вкладке!");
+                    }
+                    return false;
+                });                
+            });
+        };   
+        $(document).ready(main);
+// --------------------------------------------------------------------------------            
