@@ -1,4 +1,4 @@
-                            // Интерактивность(стр 142)
+// Интерактивность(стр 142)
 
     // Проверяем работу js в консоли F12:
 
@@ -37,7 +37,7 @@
         //         return false;
         //     });
         // }
-        // $(document).ready(main);
+        // $(document).ready(main);    
 
                         // Отсебятина: пробую заменить строку целую на переменную, объявленную ранее:
 
@@ -320,37 +320,224 @@
 // Вторая вкладка (Старые) будет перечислять задачи в том же порядке, что и в массиве, а первая вкладка (Новые) — в обратном.
 // Для начала: как будет перестраиваться контент в случае щелчка на второй вкладке:
 
-        var main = function () {
-            "use strict";
-            var toDos = [
-              "Закончить писать эту книгу",
-              "Вывести Грейси на прогулку в парк",
-              "Ответить на электронные письма",
-              "Подготовиться к лекции в понедельник",
-              "Обновить несколько новых задач",
-              "Купить продукты"
-            ];
-            $('.tabs a span').toArray().forEach(function(element) {
-                $(element).on("click", function () {
-                    var $element = $(element),
-                    $content;
-                    $(".tabs a span").removeClass("active");
-                    $element.addClass("active");
-                    $("main .content").empty();
-                    if ($element.parent().is(":nth-child(1)")) {
-                        console.log("Щелчок на первой вкладке!");
-                    }   else if ($element.parent().is(":nth-child(2)")) {
-                        $content = $("<ul>");
-                        toDos.forEach(function (todo) {
-                            $content.append($("<li>").text(todo));
-                        });
+        // var main = function () {
+        //     "use strict";
+        //     var toDos = [
+        //       "Закончить писать эту книгу",
+        //       "Вывести Грейси на прогулку в парк",
+        //       "Ответить на электронные письма",
+        //       "Подготовиться к лекции в понедельник",
+        //       "Обновить несколько новых задач",
+        //       "Купить продукты"
+        //     ];
+        //     $('.tabs a span').toArray().forEach(function(element) {
+        //         $(element).on("click", function () {
+        //             var $element = $(element),
+        //             $content;
+        //             $(".tabs a span").removeClass("active");
+        //             $element.addClass("active");
+        //             $("main .content").empty();
+        //             if ($element.parent().is(":nth-child(1)")) {
+        //                 console.log("Щелчок на первой вкладке!");
+        //             }   else if ($element.parent().is(":nth-child(2)")) {
+        //                 $content = $("<ul>");
+        //                 toDos.forEach(function (todo) {
+        //                     $content.append($("<li>").text(todo));
+        //                 });
+        //                     $("main .content").append($content);
+        //             }   else if ($element.parent().is(":nth-child(3)")) {
+        //                 console.log("Щелчок на третьей вкладке!");
+        //             }
+        //             return false;
+        //         });                
+        //     });
+        // };   
+        // $(document).ready(main);
+// --------------------------------------------------------------------------------
+
+
+// var main = function () {
+//     "use strict";
+//     var toDos = [
+//       "Закончить писать эту книгу",
+//       "Вывести Грейси на прогулку в парк",
+//       "Ответить на электронные письма",
+//       "Подготовиться к лекции в понедельник",
+//       "Обновить несколько новых задач",
+//       "Купить продукты"
+//     ];
+//     $('.tabs a span').toArray().forEach(function(element) {
+//         $(element).on("click", function () {
+//             var $element = $(element),
+//             $content;
+//             $(".tabs a span").removeClass("active");
+//             $element.addClass("active");
+//             $("main .content").empty();
+//             if ($element.parent().is(":nth-child(1)")) {
+//                 console.log("Щелчок на первой вкладке!");
+//             }   else if ($element.parent().is(":nth-child(2)")) {
+//                 $content = $("<ul>");
+//                 toDos.forEach(function (todo) {
+//                     $content.append($("<li>").text(todo));
+//                 });
+//                     $("main .content").append($content);
+//             }   else if ($element.parent().is(":nth-child(3)")) {
+//                 console.log("Щелчок на третьей вкладке!");
+//             }
+//             return false;
+//         });                
+//     });
+// };   
+// $(document).ready(main);   
+//------------------------------------------------------------------------------------------------ 
+
+            // var main = function () {
+            //     "use strict";
+            //     var toDos = [
+                    // "Закончить писать эту книгу",
+                    // "Вывести Грейси на прогулку в парк",
+                    // "Ответить на электронные письма",
+                    // "Подготовиться к лекции на понедельник",
+                    // "Обновить несколько новых задач",
+                    // "Купить продукты"                    
+            //     ];                
+            //     $(".tabs a span").toArray().forEach(function (element) {
+            //         $(element).on("click", function () {
+            //             var $element = $(element),
+            //             $content;
+            //             $(".tabs a span").removeClass("active");
+            //             $element.addClass("active");
+            //             $("main .content").empty();
+            //             if ($element.parent().is(":nth-child(1)")) {
+            //                 $content = $("<ul></ul>");
+            //                 // for (i=0; )
+            //             } else if ($element.parent().is(":nth-child(2)")) {
+            //                 $content = $("<ul></ul>");
+            //                 toDos.forEach(function (todo) {
+            //                     $content.append($("<li></li>").text(todo));
+            //                 });                            
+            //                 $("main .content").append($content);
+            //             } else if ($element.parent().is(":nth-child(3)")) {
+            //                 console.log("3-й");
+            //             }
+            //             return false;
+            //         });
+            //     });
+            // }
+            // $(document).ready(main);
+
+
+            var main = function () {
+                "use strict";
+                var toDos = [
+                    "Закончить писать эту книгу",
+                    "Вывести Грейси на прогулку в парк",
+                    "Ответить на электронные письма",
+                    "Подготовиться к лекции на понедельник",
+                    "Обновить несколько новых задач",
+                    "Купить продукты"
+                ];                
+                // $content = $("<ul></ul>");
+                $(".tabs a span").toArray().forEach(function (element) {
+                    $(element).on("click", function () {
+                        var $element = $(element),
+                        $content;
+                        $(".tabs a span").removeClass("active");
+                        $element.addClass("active");
+                        $("main .content").empty();
+                        if ($element.parent().is(":nth-child(1)")) {
+                            $content = $("<ul></ul>");
+                            for (var i = toDos.length-1; i >= 0; i--) {
+                                $content.append($("<li></li>").text(toDos[i])); 
+                            }                            
+                                    // Реализация при помощи цикла while:
+                            // var i = toDos.length-1;
+                            // while (i>=0) {
+                            //     $content.append($("<li></li>").text(toDos[i]));
+                            //     i--;
+                            // }
                             $("main .content").append($content);
-                    }   else if ($element.parent().is(":nth-child(3)")) {
-                        console.log("Щелчок на третьей вкладке!");
-                    }
-                    return false;
-                });                
-            });
-        };   
-        $(document).ready(main);
-// --------------------------------------------------------------------------------            
+                            return false;         
+                            } else if ($element.parent().is(":nth-child(2)")) {
+                            $content = $("<ul></ul>");
+                            toDos.forEach(function (todo) {
+                                $content.append($("<li></li>").text(todo));
+                            });
+                            $("main .content").append($content);
+                            return false;
+                        } else if ($element.parent().is(":nth-child(3)")) {
+//------------------------------------------------------------------------------------------
+                                    // 1st option:                                       
+                            // $content = $("<form></form>");
+                            // $(".main .content").append($content);
+                            // var $content_1 = $content.append($("<input>").css({
+                            //     "width" : "260px",
+                            //     "height" : "25px",
+                            //     "margin-right" : "5px",
+                            //     "margin-top" : "30px",
+                            //     "margin-left" : "10px"
+                            // }));
+                            // $(".main .content").append($content_1);
+                            // var $content_2 = $content.append($("<button></button>").css({
+                            //     "background" : "#cccccc",
+                            //     "width" : "18px",
+                            //     "height" : "27px",
+                            //     "border-radius" : "5px",
+                            //     "font-size" : "20px",
+                            //     "font-weight" : "bold",
+                            //     "position" : "absolute",
+                            //     "bottom" : "55px",
+                            //     "padding-right" : "15px",
+                            //     "padding-left" : "1px",                               
+                            //     "padding-bottom" : "25px"                                
+                            // }));                                             
+                            // $("form button").append($("<span>+</span>"));                
+                            // return false;
+    //------------------------------------------------------------------------------------
+                                    // 2nd option:
+                            // var $content_1 = $("<form class=form_list></form>").append($("<input type=text>").css({
+                            //     "width" : "260px",
+                            //     "height" : "25px",
+                            //     "margin-right" : "5px",
+                            //     "margin-top" : "30px",
+                            //     "margin-left" : "10px"
+                            // })).append($("<button><span>+</span></button>").css({
+                            //     "background" : "#cccccc",
+                            //     "width" : "18px",
+                            //     "height" : "27px",
+                            //     "border-radius" : "5px",
+                            //     "font-size" : "20px",
+                            //     "font-weight" : "bold",
+                            //     "position" : "absolute",
+                            //     "bottom" : "55px",
+                            //     "padding-right" : "15px",
+                            //     "padding-left" : "1px",                               
+                            //     "padding-bottom" : "25px"                                
+                            // }));                            
+                            // $(".main .content").append($content_1);                            
+                            // $(".form_list button").on("click", function (e) {
+                            //     var $newNote = $("<li></li>");
+                            //     var $newNoteText = $(".form_list input").val();
+                            //     $newNote.text($newNoteText);
+                            //     $(".main .content ul").append($newNote);                                
+                            //     return false;
+                            // });
+                            // return false;
+                        }
+                        
+                    });
+                                //стр.148 по поводу trigger`a
+                    //$(".tabs a:first-child span").trigger("click"); // иммитация щелчка по 1-й вкладке
+                    //$(".tabs a:last-child span").trigger("click");  // иммитация щелчка по 3-й вкладке
+                    //$(".tabs a:nth-child(2) span").trigger("click"); // иммитация щелчка по 2-й вкладке
+                }); 
+                               
+            }
+            $(document).ready(main);
+
+
+    
+
+            
+
+
