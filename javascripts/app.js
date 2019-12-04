@@ -426,118 +426,131 @@
             // }
             // $(document).ready(main);
 
+    // var main = function () {
+    //     "use strict";
+    // var toDos = [
+    //     "Закончить писать эту книгу",
+    //     "Вывести Грейси на прогулку в парк",
+    //     "Ответить на электронные письма",
+    //     "Подготовиться к лекции на понедельник",
+    //     "Обновить несколько новых задач",
+    //     "Купить продукты"
+    // ];            
+    //     $(".tabs a span").toArray().forEach(function (element) {
+    //         var $element = $(element);
+    //         $element.on("click", function () {
+    //             var $content,
+    //                 $input,
+    //                 $button,
+    //                 $newNote,
+    //                 i;
+    //             $(".tabs a span").removeClass("active");
+    //             $element.addClass("active");
+    //             $(".main .content").empty();
 
-            var main = function () {
-                "use strict";
-                var toDos = [
-                    "Закончить писать эту книгу",
-                    "Вывести Грейси на прогулку в парк",
-                    "Ответить на электронные письма",
-                    "Подготовиться к лекции на понедельник",
-                    "Обновить несколько новых задач",
-                    "Купить продукты"
-                ];                
-                // $content = $("<ul></ul>");
-                $(".tabs a span").toArray().forEach(function (element) {
-                    $(element).on("click", function () {
-                        var $element = $(element),
-                        $content;
-                        $(".tabs a span").removeClass("active");
-                        $element.addClass("active");
-                        $("main .content").empty();
-                        if ($element.parent().is(":nth-child(1)")) {
-                            $content = $("<ul></ul>");
-                            for (var i = toDos.length-1; i >= 0; i--) {
-                                $content.append($("<li></li>").text(toDos[i])); 
-                            }                            
-                                    // Реализация при помощи цикла while:
-                            // var i = toDos.length-1;
-                            // while (i>=0) {
-                            //     $content.append($("<li></li>").text(toDos[i]));
-                            //     i--;
-                            // }
-                            $("main .content").append($content);
-                            return false;         
-                            } else if ($element.parent().is(":nth-child(2)")) {
-                            $content = $("<ul></ul>");
-                            toDos.forEach(function (todo) {
-                                $content.append($("<li></li>").text(todo));
-                            });
-                            $("main .content").append($content);
-                            return false;
-                        } else if ($element.parent().is(":nth-child(3)")) {
-//------------------------------------------------------------------------------------------
-                                    // 1st option:                                       
-                            // $content = $("<form></form>");
-                            // $(".main .content").append($content);
-                            // var $content_1 = $content.append($("<input>").css({
-                            //     "width" : "260px",
-                            //     "height" : "25px",
-                            //     "margin-right" : "5px",
-                            //     "margin-top" : "30px",
-                            //     "margin-left" : "10px"
-                            // }));
-                            // $(".main .content").append($content_1);
-                            // var $content_2 = $content.append($("<button></button>").css({
-                            //     "background" : "#cccccc",
-                            //     "width" : "18px",
-                            //     "height" : "27px",
-                            //     "border-radius" : "5px",
-                            //     "font-size" : "20px",
-                            //     "font-weight" : "bold",
-                            //     "position" : "absolute",
-                            //     "bottom" : "55px",
-                            //     "padding-right" : "15px",
-                            //     "padding-left" : "1px",                               
-                            //     "padding-bottom" : "25px"                                
-                            // }));                                             
-                            // $("form button").append($("<span>+</span>"));                
-                            // return false;
-    //------------------------------------------------------------------------------------
-                                    // 2nd option:
-                            // var $content_1 = $("<form class=form_list></form>").append($("<input type=text>").css({
-                            //     "width" : "260px",
-                            //     "height" : "25px",
-                            //     "margin-right" : "5px",
-                            //     "margin-top" : "30px",
-                            //     "margin-left" : "10px"
-                            // })).append($("<button><span>+</span></button>").css({
-                            //     "background" : "#cccccc",
-                            //     "width" : "18px",
-                            //     "height" : "27px",
-                            //     "border-radius" : "5px",
-                            //     "font-size" : "20px",
-                            //     "font-weight" : "bold",
-                            //     "position" : "absolute",
-                            //     "bottom" : "55px",
-                            //     "padding-right" : "15px",
-                            //     "padding-left" : "1px",                               
-                            //     "padding-bottom" : "25px"                                
-                            // }));                            
-                            // $(".main .content").append($content_1);                            
-                            // $(".form_list button").on("click", function (e) {
-                            //     var $newNote = $("<li></li>");
-                            //     var $newNoteText = $(".form_list input").val();
-                            //     $newNote.text($newNoteText);
-                            //     $(".main .content ul").append($newNote);                                
-                            //     return false;
-                            // });
-                            // return false;
-                        }
-                        
+    //             if ($element.parent().is(":nth-child(1)")) {
+    //                 $content = $("<ul></ul>");
+    //                 for (i = toDos.length-1; i >= 0; i--) {
+    //                     $content.append($("<li></li>").text(toDos[i]));
+    //                 }
+    //             } else if ($element.parent().is(":nth-child(2)")) {
+    //                 $content = $("<ul></ul>");
+    //                 toDos.forEach(function (todo) {
+    //                     $content.append($("<li></li>").text(todo));
+    //                 });                    
+    //             } else if ($element.parent().is(":nth-child(3)")) {
+    //                 $input = $("<input>");
+    //                 $button = $("<button></button>").text("+");
+    //                 $button.on("click", function () {
+    //                     if ($input.val() !== "") {
+    //                         toDos.push($input.val());
+    //                         // $newNote.hide();
+    //                     }                        
+    //                 });
+    //                 $input.on("keypress", function (e) {
+    //                     if (e.keyCode === 13) {
+    //                         toDos.push($input.val());
+    //                     };
+    //                 });
+    //                 $content = $("<div></div>").append($input).append($button);                    
+    //             }
+    //             $(".main .content").append($content);
+    //             return false;
+    //         });
+    //     });
+    // }
+    // $(document).ready(main);
+
+
+    var main = function () {
+        "use strict";
+        var toDos = [
+            "Закончить писать эту книгу",
+            "Вывести Грейси на прогулку в парк",
+            "Ответить на электронные письма",
+            "Подготовиться к лекции на понедельник",
+            "Обновить несколько новых задач",
+            "Купить продукты"
+        ];
+        $(".tabs a span").toArray().forEach(function (element) {
+            var $element = $(element);
+            $element.on("click", function () {
+                var $content,
+                    $input,
+                    $button,
+                    i;
+                $(".main a span").removeClass("active");
+                $element.addClass("active");
+                $(".main .content").empty();
+                
+                if ($element.parent().is(":nth-child(1)")) {
+                    $content = $("<ul></ul>");
+                    for (i=toDos.length-1; i>=0; i--) {
+                        $content.append($("<li></li>").text(toDos[i]));
+                    }                    
+                } else if ($element.parent().is(":nth-child(2)")) {
+                    $content = $("<ul></ul>");
+                    toDos.forEach(function (todo) {
+                        $content.append($("<li></li>").text(todo));
                     });
-                                //стр.148 по поводу trigger`a
-                    //$(".tabs a:first-child span").trigger("click"); // иммитация щелчка по 1-й вкладке
-                    //$(".tabs a:last-child span").trigger("click");  // иммитация щелчка по 3-й вкладке
-                    //$(".tabs a:nth-child(2) span").trigger("click"); // иммитация щелчка по 2-й вкладке
-                }); 
-                               
-            }
-            $(document).ready(main);
-
-
-    
-
-            
+                } else if ($element.parent().is(":nth-child(3)")) {
+                    $input = $("<input>");
+                    $button = $("<button></button>").text("+");
+                    $button.on("click", function () {
+                        if ($input.val() !== "") {
+                            toDos.push($input.val());
+                        }
+                    });
+                    $input.on("keypress", function (e) {
+                        if ($input.val() !== "") {
+                            if (e.keyCode === 13) {
+                                toDos.push($input.val());
+                            }
+                        }                                                                    
+                    });
+// Вариант для DRY (который в этом случае оказывается не короче, а, наоборот - длинее):
+                    // var addNoteFromInputBox = function () {
+                    //     if ($input.val() !== "") {
+                    //         toDos.push($input.val());
+                    //     }
+                    // }
+                    // $button.on("click", function () {
+                    //     addNoteFromInputBox();
+                    // });
+                    // $input.on("keypress", function (e) {                        
+                    //     if (e.keyCode === 13) {
+                    //         addNoteFromInputBox(); 
+                    //     }                                                                                            
+                    // });
+                    $content = $("<div></div>").append($input, $button);
+                }
+                $(".main .content").append($content);
+                return false;
+            });
+        });
+    // фальшивый щелчок по 1-й вклдадке(для проверки: конструир-ся ли содержимое(чтобы удалить из DOM лишний контент?):
+        //$(".tabs a:first-child span").trigger("click"); 
+    }
+    $(document).ready(main);
 
 

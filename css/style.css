@@ -46,7 +46,8 @@ p {
             }
     
     .main {                
-        padding-top: 30px;        
+        padding-top: 30px; 
+        padding-bottom: 30px;       
         position: relative;
         
         display: flex;
@@ -78,34 +79,23 @@ p {
             padding-left: 20px;
             list-style-type: circle;
         }         
-         .main a.main_a {            
-             display: block;
-             width: 200px;
-             margin-bottom: 10px;             
-             color: blue;
-             font-size: 14px;
-             font-weight: bold;                          
-             text-decoration: none;             
-             cursor: pointer;
-         }      
+        .main a.main_a {            
+            display: block;
+            width: 200px;
+            margin-bottom: 10px;             
+            color: blue;
+            font-size: 14px;
+            font-weight: bold;                          
+            text-decoration: none;             
+            cursor: pointer;
+        }      
         .main-img {
             position: absolute;          
             width: 185px;
             height: 310px;               
             right: 40px;
             top: 30px;
-        }
-
-        .to_main {
-            display: block;
-            margin-top: 20px;
-             margin-bottom: 25px;             
-             color: blue;
-             font-size: 14px;
-             font-weight: bold;                          
-             text-decoration: none;             
-             cursor: pointer;
-        }
+        }        
 
 .footer {
     background-color: #ccc;       
